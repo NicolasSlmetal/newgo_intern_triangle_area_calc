@@ -4,3 +4,9 @@ class Triangle{
         this.height = height
     }
 }
+
+class TriangleBaseHeight extends Triangle{
+    constructor(base, height){
+        super(base, height)
+    }
+}
