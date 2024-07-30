@@ -1,45 +1,42 @@
-Semana 2 | Item 3
+Problem Situation: Calculating the Area of a Triangle
 
-Aplicar conhecimento do curso de Git em um projeto teste simples: uma solução orientada a objetos para calcular a área de triângulos de diferentes formas.
+Context
 
-Situação Problema: Cálculo de Área de Triângulo
+You have been hired to develop a Node.js application that calculates the area of triangles using two different methods. To do this, you need to implement a system based on object orientation.
 
-Contexto
+Requirements
 
-Você foi contratado para desenvolver uma aplicação em Node.js que calcula a área de triângulos utilizando dois métodos diferentes. Para isso, é necessário implementar um sistema baseado em orientação a objetos.
+Class creation:
 
-Requisitos
+Create a base class Triangle which contains the properties common to all triangles: base and height.
+Create two subclasses, TriangleBaseHeight and TriangleSidesAngle, which inherit from the Triangle class.
 
-Criação de Classes:
+Base and Height Calculation Method:
 
-Crie uma classe base Triangulo que contém as propriedades comuns a todos os triângulos: base e altura.
-Crie duas subclasses, TrianguloBaseAltura e TrianguloLadosAngulo, que herdam da classe Triangulo.
+The TriangleBaseHeight class should have a calculateArea method that calculates the area of the triangle using the formula: 
 
-Método de Cálculo por Base e Altura:
+Area = (base × height) / 2 
 
-A classe TrianguloBaseAltura deve ter um método calcularArea que calcula a área do triângulo utilizando a fórmula: 
+Side and Angle Calculation Method:
 
-Área = (base × altura) / 2 
+The TriangleSideAngle class should contain additional properties sideA, sideB and angle (in degrees).
+Implement the calculateArea method for this class using the formula for sides and angle:
 
-Método de Cálculo por Lados e Ângulo:
+Area = ½ x sideA x sideB x sin(angle)
+Use JavaScript's Math.sin function, which works with angles in radians, to calculate the sine of the angle. You will therefore need to convert the angle from degrees to radians before calculating it.
 
-A classe TrianguloLadosAngulo deve conter propriedades adicionais ladoA, ladoB e angulo (em graus).
-Implemente o método calcularArea para esta classe utilizando a fórmula dos lados e ângulo:
+Implementation and Execution:
 
-Área = ½  x ladoA x ladoB x sin(ângulo)
-Utilize a função Math.sin do JavaScript, que trabalha com ângulos em radianos, para calcular o seno do ângulo. Portanto, será necessário converter o ângulo de graus para radianos antes do cálculo.
+Create a Node.js script that instantiates TriangleBaseHeight and TriangleSidesAngle objects and calculates their areas, displaying the results on the console.
+The script should receive the inputs (base, height, sides and angle values) interactively or via command line arguments.
 
-Implementação e Execução:
+Example of use
 
-Crie um script Node.js que instancia objetos de TrianguloBaseAltura e TrianguloLadosAngulo e calcula suas áreas, exibindo os resultados no console.
-O script deve receber as entradas (valores de base, altura, lados e ângulo) de maneira interativa ou através de argumentos na linha de comando.
+// Instantiating a triangle with base and height
+const triangleBaseHeight = new TriangleBaseHeight(10, 5);
+console.log(`Calculated area (Base and Height): ${triangleBaseHeight.calculateArea()}`);
 
-Exemplo de Uso
+// Instantiating a triangle with sides and angle
+const triangleSideAngle = new TriangleSideAngle(7, 8, 30);
+console.log(`Calculated area (Sides and Angle): ${triangleSidesAngle.calculateArea()}`)
 
-// Instanciando um triângulo com base e altura
-const trianguloBaseAltura = new TrianguloBaseAltura(10, 5);
-console.log(`Área calculada (Base e Altura): ${trianguloBaseAltura.calcularArea()}`);
-
-// Instanciando um triângulo com lados e ângulo
-const trianguloLadosAngulo = new TrianguloLadosAngulo(7, 8, 30);
-console.log(`Área calculada (Lados e Ângulo): ${trianguloLadosAngulo.calcularArea()}`)
