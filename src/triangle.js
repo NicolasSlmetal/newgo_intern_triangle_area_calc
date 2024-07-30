@@ -24,4 +24,9 @@ class TriangleSideAngle extends Triangle{
         this.sideB = sideB
         this.angle = angle
     }
+
+    calculateArea(){
+        let radianAngle = convertDegreesToRadian(this.angle)
+        return (this.sideA * this.sideB * Math.sin(radianAngle))/2
+    }
 }
