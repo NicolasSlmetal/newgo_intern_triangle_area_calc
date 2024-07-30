@@ -17,6 +17,7 @@ class TriangleBaseHeight extends Triangle{
 
 class TriangleSideAngle extends Triangle{
     constructor(sideA, sideB, angle){
+        super(0, 0)
         this.sideA = sideA
         this.sideB = sideB
         this.angle = angle
