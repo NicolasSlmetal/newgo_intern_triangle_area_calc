@@ -1,13 +1,13 @@
 import { convertDegreesToRadian } from "./utils/converter.js"
 
-class Triangle{
+export class Triangle{
     constructor(base, height){
         this.base = base
         this.height = height
     }
 }
 
-class TriangleBaseHeight extends Triangle{
+export class TriangleBaseHeight extends Triangle{
     constructor(base, height){
         super(base, height)
     }
@@ -17,7 +17,7 @@ class TriangleBaseHeight extends Triangle{
     }
 }
 
-class TriangleSideAngle extends Triangle{
+export class TriangleSideAngle extends Triangle{
     constructor(sideA, sideB, angle){
         super(0, 0)
         this.sideA = sideA
