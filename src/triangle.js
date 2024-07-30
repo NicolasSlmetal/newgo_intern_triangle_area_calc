@@ -1,3 +1,5 @@
+import { convertDegreesToRadian } from "./utils/converter.js"
+
 class Triangle{
     constructor(base, height){
         this.base = base
