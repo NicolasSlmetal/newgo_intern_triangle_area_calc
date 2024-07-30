@@ -13,7 +13,7 @@ class TriangleBaseHeight extends Triangle{
     }
 
     calculateArea(){
-        return (base * height)/2
+        return (this.base * this.height)/2
     }
 }
 
